@@ -15,3 +15,14 @@ def get_character_count(text):
             letters[current] = 1
     
     return letters
+
+def book_report_num(unsorted_report):
+    n_report = []
+    for char, num in unsorted_report.items():
+        if char.isalpha():
+            n_report.append({"char": char, "num" : num})
+    n_report.sort(reverse=True, key=lambda item: item["num"])
+
+        
+            
+    return n_report
