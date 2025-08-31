@@ -14,9 +14,17 @@ def get_book_text(file):
 #Main function
 def main(book):
     #tempory code to assign pass variables around. Clean later!
-    temp = get_book_text(book)
-    temp2 = get_character_count(temp)
-    print(book_report_num(temp2))
+    what_book = get_book_text(book)
+    quantity_characters = get_character_count(what_book)
+    quantity_words = get_word_count(what_book)
+    
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book}")
+    print(f"Found {quantity_words} total words")
+    print("--------- Character Count -------")
+    book_report_num(quantity_characters)
+    print ("============= END ===============")
+
 
 
 main("./books/frankenstein.txt")

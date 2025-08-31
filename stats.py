@@ -8,7 +8,8 @@ def get_word_count(text):
         num_words +=1
     
     #output quantity
-    print (f"{num_words} words found in the document")
+    #print (f"{num_words} words found in the document")
+    return num_words
 
 def get_character_count(text):
     #create empty dictionary
@@ -28,7 +29,6 @@ def get_character_count(text):
     #return the dictionary
     return letters
 
-#Start here on lesson
 def book_report_num(unsorted_report):
     n_report = []
     for char, num in unsorted_report.items():
@@ -36,7 +36,8 @@ def book_report_num(unsorted_report):
             n_report.append({"char": char, "num" : num})
     n_report.sort(reverse=True, key=lambda item: item["num"])
 
-    return n_report
+    for item in n_report:
+        print(f"{item['char']}: {item['num']}")
 
 
 
